@@ -68,7 +68,7 @@ describe("Todolist Test Suite", () => {
         var i=0;
         present=new Date().toLocaleDateString("en-CA")
         for(i in x){
-            y=dueToday()[i].dueDate<present
+            y=overdue()[i].dueDate<present
             expect(y).toBe(true);
 
         }
