@@ -30,17 +30,17 @@ describe("Todolist Test Suite", () => {
       ).toLocaleDateString("en-CA"),
     });
     add({
-      title: "5",
-      completed: false,
-      dueDate: new Date(
-        new Date().setDate(new Date().getDate() + 2)
-      ).toLocaleDateString("en-CA"),
-    });
-    add({
       title: "6",
       completed: false,
       dueDate: new Date(
         new Date().setDate(new Date().getDate() - 1)
+      ).toLocaleDateString("en-CA"),
+    });
+    add({
+      title: "5",
+      completed: false,
+      dueDate: new Date(
+        new Date().setDate(new Date().getDate() + 2)
       ).toLocaleDateString("en-CA"),
     });
   });
