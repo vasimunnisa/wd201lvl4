@@ -62,7 +62,7 @@ describe("Todolist Test Suite", () => {
     let x = overdue().length;
     var i = 0;
     const present = new Date().toLocaleDateString("en-CA");
-    for (i in x) {
+    for (i = 0; i < x; i++) {
       const y = overdue()[i].dueDate < present;
       expect(y).toBe(true);
     }
@@ -71,8 +71,8 @@ describe("Todolist Test Suite", () => {
     let x = dueToday().length;
     var i = 0;
     const present = new Date().toLocaleDateString("en-CA");
-    for (i in x) {
-      const y = dueToday()[i].dueDate < present;
+    for (i = 0; i < x; i++) {
+      const y = dueToday()[i].dueDate === present;
       expect(y).toBe(true);
     }
   });
@@ -81,8 +81,8 @@ describe("Todolist Test Suite", () => {
     let x = dueLater().length;
     var i = 0;
     const present = new Date().toLocaleDateString("en-CA");
-    for (i in x) {
-      const y = dueLater()[i].dueDate < present;
+    for (i = 0; i < x; i++) {
+      const y = dueLater()[i].dueDate > present;
       expect(y).toBe(true);
     }
   });
